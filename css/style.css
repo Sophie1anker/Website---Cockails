@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  padding: 1rem;
+  background-color: black;
+}
+
+h1 {
+  font-family: "Londrina Shadow", sans-serif;
+  color: white;
+}
+
+h2 {
+  color: white;
+  margin: 10px;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: #ffffff;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  color: white;
+}
+
+/************** Menu ************/
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  color: d0213b;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  @media (width < 800px) {
+    /* Mobil */
+
+    &.active .menu {
+      display: block;
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      top: 94px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    &.active .menu li {
+      margin: 10px 20px;
+    }
+
+    &.active .menu a {
+      font-size: 24px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (width<700px) {
+    display: none;
+  }
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  @media (width<700px) {
+    color: black;
+  }
+}
+
+.menu a:hover {
+  color: #d0213b;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  @media (width < 800px) {
+    display: block;
+    background-color: #d0213b;
+    border: 0;
+
+    &.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    &.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    &.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+  }
+}
+
+.knap {
+  color: rgb(255, 255, 255);
+  background-color: #d0213b;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+.knap:hover {
+  color: black;
+}
+
+/************ Forside ***********/
+.forside_tekst h1 {
+  font-size: 70px;
+}
+
+.knap {
+  margin-top: 40px;
+}
+
+.Forside_cocktails_billede {
+  justify-self: stretch;
+}
+
+.grid_1_1_1_1 img {
+  max-width: 100%;
+  height: auto;
+  /* padding: 20px; */
+  border-radius: 40px;
+}
+
+/********** Opskrifter ***********/
+
+.grid_1_1 img {
+  mask-image: linear-gradient(to bottom, transparent, black 10%);
+}
+
+/*********** Tips & Tricks ************/
+
+.grid_1_1_tips img {
+  border-radius: 40px;
+}
+
+/********* Footer *********/
+footer {
+  background-color: #d0213b;
+  padding: 15px;
+  text-align: center;
+}
+
+footer a img {
+  width: 12px;
+  height: 12px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}

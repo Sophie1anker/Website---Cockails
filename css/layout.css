@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/********** Forside **********/
+
+.grid_1_2 {
+  display: grid;
+  gap: 10px;
+  @media (width>800px) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.grid_1_1_1_1 {
+  display: grid;
+  gap: 20px;
+  @media (width>800px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.grid_1_1 {
+  @media (width>800px) {
+    h2 {
+      padding-top: 80px;
+    }
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+  display: grid;
+}
+
+.grid_1_1_tips {
+  @media (width>800px) {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      width: 100%;
+    }
+
+    .order {
+      order: -1;
+    }
+  }
+}
+
+/************** Forside **************/
+.forside_tekst {
+  text-align: center;
+}
+
+.forside_tekst .pour {
+  font-size: 130px;
+}
+
+/********* Opskrifter ************/
+
+.grid_1_1 .knap {
+  margin-bottom: 180px;
+  margin-left: 10px;
+}
+
+ul li {
+  margin-left: 25px;
+}
+
+/* Skjul checkbox-firkanten */
+.favorit {
+  display: none;
+}
+
+.favorit:checked + .hjerte {
+  color: red;
+}
+
+.hjerte {
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/*********** Tips & Tricks ************/
+.grid_1_1_tips h2 {
+  margin-top: 70px;
+}
